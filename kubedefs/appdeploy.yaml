@@ -19,9 +19,12 @@ spec:
         image: kubemma/vprofileapp
         imagePullPolicy: Always
         resources:
+          requests:
+            memory: "256Mi"
+            CPU: "250m"
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "512Mi"
+            cpu: "1"
         ports:
         - name: vproapp-port
           containerPort: 8080

@@ -18,9 +18,12 @@ spec:
       - name: vprodb
         image: kubemma/vprofiledb
         resources:
+          requests:
+            memory: "512Mi"
+            CPU: "250m"
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "1Gi"
+            cpu: "1"
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: vpro-db-data
