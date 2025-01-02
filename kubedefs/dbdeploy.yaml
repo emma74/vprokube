@@ -23,10 +23,10 @@ spec:
             cpu: "500m"
         volumeMounts:
         - mountPath: /var/lib/mysql
-          name: vprodb-port
+          name: vpro-db-data
         ports:
         - name: vprodb-port
-        - containerPort: 3306
+          containerPort: 3306
         env: 
          - name: MYSQL_ROOT_PASSWORD
            valueFrom:

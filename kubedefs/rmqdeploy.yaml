@@ -23,7 +23,7 @@ spec:
             cpu: "500m"
         ports:
         - name: vprormq-port
-        - containerPort: 5672
+          containerPort: 5672
         env: 
          - name: RABBITMQ_DEFAULT_PASS
            valueFrom:
